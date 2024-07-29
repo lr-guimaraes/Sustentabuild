@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Filtros</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="login.html" class="login-button">Login</a></li>
+                <li><a href="filtros.html" class="active">Filtros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="filters-section">
+            <div class="filters-container">
+                <select class="filter">
+                    <option>Material</option>
+                </select>
+                <select class="filter">
+                    <option>Fonte de Dados</option>
+                </select>
+                <select class="filter">
+                    <option>Tipo</option>
+                </select>
+                <select class="filter">
+                    <option>CO2e</option>
+                </select>
+                <select class="filter">
+                    <option>Unidade</option>
+                </select>
+            </div>
+        </section>
+        <section class="menu-section">
+            <div class="menu-container">
+                <div class="menu-item">
+                    <h3>Estruturas Verticais</h3>
+                    <div class="description-and-buttons">
+                        <label for="external-walls-1" style="text-align: left;">Paredes Externas</label>
+                        <div class="button-group">
+                            <button class="action-button"><span class="material-symbols-outlined">add</span> Criar Grupo</button>
+                            <button class="action-button"><span class="material-symbols-outlined">move_group</span> Mover Materiais</button>
+                            <button class="action-button"><span class="material-symbols-outlined">compare</span> Adicionar Comparação</button>
+                        </div>
+                    </div>
+                    <select id="columns-1" class="input-box">
+                        <option>Digite ou click na seta</option>
+                    </select>
+                    <label for="columns-2">Colunas</label>
+                    <select id="columns-2" class="input-box">
+                        <option>Digite ou click na seta</option>
+                    </select>
+                </div>
+                <div class="menu-item">
+                    <h3>Estruturas Horizontais</h3>
+                    <div class="description-and-buttons">
+                        <label for="external-walls-3" style="text-align: left;">Telhados, lages e coberturas</label>
+                        <div class="button-group">
+                            <button class="action-button"><span class="material-symbols-outlined">add</span> Criar Grupo</button>
+                            <button class="action-button"><span class="material-symbols-outlined">move_group</span> Mover Materiais</button>
+                            <button class="action-button"><span class="material-symbols-outlined">compare</span> Adicionar Comparação</button>
+                        </div>
+                    </div>
+                    <select id="columns-3" class="input-box">
+                        <option>Digite ou click na seta</option>
+                    </select>
+                    <label for="columns-4">Colunas</label>
+                    <select id="columns-4" class="input-box">
+                        <option>Digite ou click na seta</option>
+                    </select>
+                </div>
+                <div class="menu-item">
+                    <h3>Outras Estruturas</h3>
+                    <div class="description-and-buttons">
+                        <label for="external-walls-4" style="text-align: left;">Descrição do conteúdo</label>
+                        <div class="button-group">
+                            <button class="action-button"><span class="material-symbols-outlined">add</span> Criar Grupo</button>
+                            <button class="action-button"><span class="material-symbols-outlined">move_group</span> Mover Materiais</button>
+                            <button class="action-button"><span class="material-symbols-outlined">compare</span> Adicionar Comparação</button>
+                        </div>
+                    </div>
+                    <select id="columns-5" class="input-box">
+                        <option>Digite ou click na seta</option>
+                    </select>
+                    <label for="columns-6">Colunas</label>
+                    <select id="columns-6" class="input-box">
+                        <option>Digite ou click na seta</option>
+                    </select>
+                </div>
+                <div class="menu-item">
+                    <h3>Áreas Externas</h3>
+                    <div class="description-and-buttons">
+                        <label for="external-walls-7" style="text-align: left;">Descrição do conteúdo</label>
+                        <div class="button-group">
+                            <button class="action-button"><span class="material-symbols-outlined">add</span> Criar Grupo</button>
+                            <button class="action-button"><span class="material-symbols-outlined">move_group</span> Mover Materiais</button>
+                            <button class="action-button"><span class="material-symbols-outlined">compare</span> Adicionar Comparação</button>
+                        </div>
+                    </div>
+                    <select id="columns-7" class="input-box">
+                        <option>Digite ou click na seta</option>
+                    </select>
+                </div>
+                <div class="menu-item">
+                    <h3>Fundação e Subestruturas</h3>
+                    <div class="description-and-buttons">
+                        <label for="external-walls-8" style="text-align: left;">Descrição do conteúdo</label>
+                        <div class="button-group">
+                            <button class="action-button"><span class="material-symbols-outlined">add</span> Criar Grupo</button>
+                            <button class="action-button"><span class="material-symbols-outlined">move_group</span> Mover Materiais</button>
+                            <button class="action-button"><span class="material-symbols-outlined">compare</span> Adicionar Comparação</button>
+                        </div>
+                    </div>
+                    <select id="columns-8" class="input-box">
+                        <option>Digite ou click na seta</option>
+                    </select>
+                </div>
+                <div class="menu-item">
+                    <h3>Tecnologia de Construção</h3>
+                    <div class="description-and-buttons">
+                        <label for="external-walls-9" style="text-align: left;">Tipo, Quantidade de CO2</label>
+                        <div class="button-group">
+                            <button class="action-button"><span class="material-symbols-outlined">add</span> Criar Grupo</button>
+                            <button class="action-button"><span class="material-symbols-outlined">move_group</span> Mover Materiais</button>
+                            <button class="action-button"><span class="material-symbols-outlined">compare</span> Adicionar Comparação</button>
+                        </div>
+                    </div>
+                    <select id="columns-9" class="input-box">
+                        <option>Digite ou click na seta</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Seu Site. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
