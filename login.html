@@ -26,16 +26,19 @@
             </div>
             <form id="login-form" class="input-group">
                 <h2>Login</h2>
-                <input type="text" class="input-field" placeholder="Email" required>
-                <input type="password" class="input-field" placeholder="Senha" required>
+                <input type="email" class="input-field" placeholder="Email" name="email" required>
+                <input type="password" class="input-field" placeholder="Senha" name="senha" required>
                 <button type="submit" class="submit-btn">Entrar</button>
+                <div id="login-result"></div>
             </form>
             <form id="register-form" class="input-group">
                 <h2>Cadastro</h2>
-                <input type="text" class="input-field" placeholder="Nome Completo" required>
-                <input type="email" class="input-field" placeholder="Email" required>
-                <input type="password" class="input-field" placeholder="Senha" required>
+                <input type="text" class="input-field" placeholder="Nome Completo" name="nome" required>
+                <input type="text" class="input-field" placeholder="CPF" name="cpf" required>
+                <!-- <input type="email" class="input-field" placeholder="Email" name="email" required> -->
+                <input type="password" class="input-field" placeholder="Senha" name="senha" required>
                 <button type="submit" class="submit-btn">Cadastrar</button>
+                <div id="register-result"></div>
             </form>
         </div>
     </main>

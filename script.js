@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error:', error));
     });
 });
+
 // script.js
 function toggleForm(formType) {
     var loginForm = document.getElementById('login-form');

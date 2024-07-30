@@ -1,26 +1,52 @@
-<?php
-include 'config.php';
+<!-- <?php
+ 
+$NameUser = $_POST["nome"];
+// $BirthDate = $_POST["BirthDate"];
+// $User = $_POST["User"];
+$Email = $_POST["email"];
+$PasswordUser = $_POST["senha"];
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $username, $password);
+$con = mysqli_connect("localhost:3306", "root", "root", "bank_tde");
 
-    if ($stmt->execute()) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+mysqli_query($con, "INSERT INTO registration (nome, email, senha) VALUES('$nome', '$email','$senha') ");    
+// include 'config.php';
 
-    $stmt->close();
-    $conn->close();
-}
-?>
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     $nome = $_POST['nome'];
+//     $cpf = $_POST['cpf'];
+//     $email = $_POST['email'];
+//     $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
-<!DOCTYPE html>
+//     $sql = "INSERT INTO users (nome, cpf, email, senha) VALUES (?, ?, ?, ?)";
+//     $stmt = $conn->prepare($sql);
+//     $stmt->bind_param("ssss", $nome, $cpf, $email, $senha);
+
+//     if ($stmt->execute()) {
+//         echo "Registration successful!";
+//     } else {
+//         echo "Error: " . $stmt->error;
+//     }
+
+//     $stmt->close();
+//     $conn->close();
+// }
+?> -->
+
+
+$NameUser = $_POST["nome"];
+// $BirthDate = $_POST["BirthDate"];
+// $User = $_POST["User"];
+$Email = $_POST["email"];
+$PasswordUser = $_POST["senha"];
+
+
+$con = mysqli_connect("localhost:3306", "root", "root", "bank_tde");
+
+mysqli_query($con, "INSERT INTO registration (nome, email, senha) VALUES('$nome', '$email','$senha') ");    
+
+
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Register</title>
@@ -36,4 +62,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="submit" value="Register">
     </form>
 </body>
-</html>
+</html> -->
