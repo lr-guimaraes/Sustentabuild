@@ -978,5 +978,170 @@ body {
 footer {
     font-family: 'Lato', sans-serif;
 }
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
+header {
+    background-color: #4A8557;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #4A8557 0%, #191414 100%);
+    text-align: center;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    color: white;
+    background-image: url('imagem.jpg');
+    background-size: cover; /* Ajusta a imagem para cobrir completamente a área */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-section button {
+    background-color: #4A8557;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-section button:hover {
+    background-color: #14833B;
+}
+
+.services-section, .about-section, .contact-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services-section h2, .about-section h2, .contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+}
+
+.service {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px; /* Largura fixa para serviços */
+    margin: 10px; /* Margem entre os serviços */
+    text-align: left;
+}
+
+footer {
+    background-color: #4A8557;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Muda para coluna em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espaço entre os itens do menu */
+    }
+
+    .hero-section {
+        padding: 50px 10px; /* Menos padding em telas menores */
+        height: auto; /* Deixa a altura automática */
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em; /* Reduz o tamanho da fonte */
+    }
+
+    .hero-section p {
+        font-size: 1em; /* Reduz o tamanho da fonte */
+    }
+
+    .service {
+        width: 90%; /* Largura adaptativa para serviços */
+        max-width: 400px; /* Largura máxima */
+    }
+
+    .form-box {
+        width: 90%; /* Adapta a largura da caixa de formulário */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2em; /* Reduz ainda mais em telas muito pequenas */
+    }
+
+    .hero-section p {
+        font-size: 0.9em; /* Reduz o texto para uma melhor visualização */
+    }
+
+    .hero-section button {
+        padding: 10px 20px; /* Ajusta o padding do botão */
+    }
+
+    footer {
+        padding: 5px 0; /* Reduz o padding do rodapé */
+    }
+}
 
 
