@@ -1178,8 +1178,8 @@ nav ul li a {
     }
     
     nav ul li a{
-        margin-left: 1%; /* Reduz o espaço entre os itens do menu */
-        font-size: 0.15em;
+        margin-left: 0.6%; /* Reduz o espaço entre os itens do menu */
+        font-size: 0.1em;
     }
 }
 
