@@ -1143,5 +1143,46 @@ footer {
         padding: 5px 0; /* Reduz o padding do rodapé */
     }
 }
+header {
+    background-color: #4A8557;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.logo img {
+    max-width: 150px; /* Define uma largura máxima para o logo */
+    height: auto; /* Mantém a proporção */
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Garante que os itens fiquem na mesma linha */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px; /* Espaço entre os itens do menu */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 120px; /* Reduz o tamanho do logo em telas menores */
+    }
+    
+    nav ul li {
+        margin-left: 10px; /* Reduz o espaço entre os itens do menu */
+    }
+}
 
 
