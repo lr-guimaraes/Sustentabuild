@@ -1172,7 +1172,7 @@ nav ul li a {
 }
 
 /* Media Queries para Responsividade */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .logo img {
         max-width: 75px; /* Reduz o tamanho do logo em telas menores */
     }
@@ -1183,4 +1183,16 @@ nav ul li a {
     }
 }
 
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas maiores */
+    grid-template-rows: auto; /* Altura automática para as linhas */
+    gap: 20px; /* Espaço entre os itens */
+}
+
+@media (max-width: 500px) {
+    .menu-container {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+}
 
