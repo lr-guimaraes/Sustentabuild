@@ -1174,12 +1174,12 @@ nav ul li a {
 /* Media Queries para Responsividade */
 @media (max-width: 480px) {
     .logo img {
-        max-width: 175px; /* Reduz o tamanho do logo em telas menores */
+        max-width: 125px; /* Reduz o tamanho do logo em telas menores */
     }
     
     nav ul li a{
         margin-left: 1%; /* Reduz o espaço entre os itens do menu */
-        font-size: 0.2em;
+        font-size: 0.15em;
     }
 }
 
