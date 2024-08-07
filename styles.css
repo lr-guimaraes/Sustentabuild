@@ -1094,14 +1094,14 @@ footer {
 
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
-    nav ul {
+/*     nav ul {
         flex-direction: column; /* Muda para coluna em telas menores */
         align-items: center; /* Centraliza os itens */
-    }
+    } */
 
-    nav ul li {
+/*     nav ul li {
         margin: 10px 0; /* Espaço entre os itens do menu */
-    }
+    } */
 
     .hero-section {
         padding: 50px 10px; /* Menos padding em telas menores */
