@@ -1196,3 +1196,83 @@ nav ul li a {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+.filters-section {
+    background-color: #1E1E1E;
+    padding: 20px;
+}
+
+.filters-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.filter {
+    background-color: #282828;
+    color: white;
+    border: 1px solid  #4A8557;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.menu-section {
+    padding: 20px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dois itens por linha */
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+}
+
+.menu-item {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.menu-item h3 {
+    margin-bottom: 10px;
+}
+
+.menu-item p {
+    color: #B3B3B3;
+}
+
+.menu-item label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.input-box {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #404040;
+    color: white;
+}
+
+
+
+/* Adicione a media query para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: 1fr; /* Muda para uma coluna */
+    }
+}
