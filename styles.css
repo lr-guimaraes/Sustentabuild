@@ -1177,8 +1177,9 @@ nav ul li a {
         max-width: 30%; /* Reduz o tamanho do logo em telas menores */
     }
     
-    nav ul li {
+    nav ul li a{
         margin-left: 1%; /* Reduz o espaço entre os itens do menu */
+        font-size: 0.5em;
     }
 }
 
