@@ -988,14 +988,14 @@ body {
     color: #FFFFFF;
 }
 
-header {
+/* header {
     background-color: #4A8557;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
-}
+} */
 
 nav ul {
     list-style: none;
