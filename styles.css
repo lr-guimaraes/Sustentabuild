@@ -15,10 +15,6 @@ header {
     padding: 15px 30px;
 }
 
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
 
 nav ul {
     list-style: none;
@@ -116,7 +112,7 @@ body {
 }
 
 header {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -124,10 +120,6 @@ header {
     padding: 20px 30px;
 }
 
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
 
 nav ul {
     list-style: none;
@@ -155,11 +147,12 @@ nav ul li a.login-button {
 
 nav ul li a.login-button:hover {
     background-color: white;
-    color: #1DB954;
+    color:  #4A8557;
 }
 
 .hero-section {
-    background: linear-gradient(135deg, #1DB954 0%, #191414 100%);
+    
+    background: linear-gradient(135deg,  #4A8557 0%, #191414 100%);
     text-align: center;
     padding: 100px 20px;
     display: flex;
@@ -167,6 +160,10 @@ nav ul li a.login-button:hover {
     justify-content: center;
     height: 80vh;
     color: white;
+    background-image: url('imagem.jpg');
+    background-size: 100%; /* Ajusta a imagem para cobrir completamente a área */
+
+    
 }
 
 .hero-content {
@@ -184,7 +181,7 @@ nav ul li a.login-button:hover {
 }
 
 .hero-section button {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     padding: 15px 30px;
     border: none;
@@ -225,7 +222,7 @@ nav ul li a.login-button:hover {
 }
 
 footer {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -242,7 +239,7 @@ body {
 }
 
 header {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -250,10 +247,7 @@ header {
     padding: 20px 30px;
 }
 
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
+
 
 nav ul {
     list-style: none;
@@ -303,7 +297,7 @@ nav ul li a {
 }
 
 .form-toggle button:hover {
-    color: #1DB954;
+    color:  #4A8557;
 }
 
 .input-group {
@@ -329,7 +323,7 @@ nav ul li a {
 }
 
 .submit-btn {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     padding: 10px;
     border: none;
@@ -344,7 +338,7 @@ nav ul li a {
 }
 
 footer {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -364,7 +358,7 @@ body {
 }
 
 header {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -372,9 +366,7 @@ header {
     padding: 20px 30px;
 }
 
-.logo img {
-    height: 40px;
-}
+
 
 nav ul {
     list-style: none;
@@ -424,7 +416,7 @@ nav ul li a {
 }
 
 .form-toggle button:hover {
-    color: #1DB954;
+    color:  #4A8557;
 }
 
 .input-group {
@@ -450,7 +442,7 @@ nav ul li a {
 }
 
 .submit-btn {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     padding: 10px;
     border: none;
@@ -465,7 +457,7 @@ nav ul li a {
 }
 
 footer {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -485,7 +477,7 @@ body {
 }
 
 header {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -493,17 +485,8 @@ header {
     padding: 20px 30px;
 }
 
-.logo {
-    height: 40px;
-    background: linear-gradient(45deg, #1DB954, #1A73E8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 
-.logo img {
-    height: 40px;
-    filter: brightness(0) invert(1);
-}
+
 
 nav ul {
     list-style: none;
@@ -553,7 +536,7 @@ nav ul li a {
 }
 
 .form-toggle button:hover {
-    color: #1DB954;
+    color:  #4A8557;
 }
 
 .input-group {
@@ -579,7 +562,7 @@ nav ul li a {
 }
 
 .submit-btn {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     padding: 10px;
     border: none;
@@ -594,7 +577,7 @@ nav ul li a {
 }
 
 footer {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -614,7 +597,7 @@ body {
 }
 
 header {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -622,34 +605,25 @@ header {
     padding: 20px 30px;
 }
 
-.logo {
-    position: relative;
-    height: 40px;
-    width: 150px; /* Ajuste conforme necessário */
-}
-
 .logo img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    mask-image: url('logo.png');
-    -webkit-mask-image: url('logo.png');
+    width: 190px;
+    height: 75px;
 }
 
-.logo::before {
+
+
+
+
+/* .logo::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(45deg, #1DB954, #1A73E8);
+    background: linear-gradient(45deg,  #4A8557, #1A73E8);
     z-index: 0;
-}
+} */
 
 nav ul {
     list-style: none;
@@ -686,7 +660,7 @@ nav ul li a.active {
 .filter {
     background-color: #282828;
     color: white;
-    border: 1px solid #1DB954;
+    border: 1px solid  #4A8557;
     padding: 10px;
     border-radius: 5px;
     width: 100%;
@@ -719,7 +693,7 @@ nav ul li a.active {
 }
 
 footer {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -739,7 +713,7 @@ body {
 }
 
 header {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -747,34 +721,20 @@ header {
     padding: 20px 30px;
 }
 
-.logo {
-    position: relative;
-    height: 40px;
-    width: 150px; /* Ajuste conforme necessário */
-}
 
-.logo img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    mask-image: url('logo.png');
-    -webkit-mask-image: url('logo.png');
-}
 
-.logo::before {
+
+
+/* .logo::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(45deg, #1DB954, #1A73E8);
+    background: linear-gradient(45deg,  #4A8557, #1A73E8);
     z-index: 0;
-}
+} */
 
 nav ul {
     list-style: none;
@@ -811,7 +771,7 @@ nav ul li a.active {
 .filter {
     background-color: #282828;
     color: white;
-    border: 1px solid #1DB954;
+    border: 1px solid  #4A8557;
     padding: 10px;
     border-radius: 5px;
     width: 100%;
@@ -859,7 +819,7 @@ nav ul li a.active {
 }
 
 footer {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -879,7 +839,7 @@ body {
 }
 
 header {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -887,34 +847,16 @@ header {
     padding: 20px 30px;
 }
 
-.logo {
-    position: relative;
-    height: 40px;
-    width: 150px; /* Ajuste conforme necessário */
-}
-
-.logo img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    mask-image: url('logo.png');
-    -webkit-mask-image: url('logo.png');
-}
-
-.logo::before {
+/* .logo::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(45deg, #1DB954, #1A73E8);
+    background: linear-gradient(45deg,  #4A8557, #1A73E8);
     z-index: 0;
-}
+} */
 
 nav ul {
     list-style: none;
@@ -951,7 +893,7 @@ nav ul li a.active {
 .filter {
     background-color: #282828;
     color: white;
-    border: 1px solid #1DB954;
+    border: 1px solid  #4A8557;
     padding: 10px;
     border-radius: 5px;
     width: 100%;
@@ -995,7 +937,7 @@ nav ul li a.active {
 }
 
 .action-button {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     border: none;
     border-radius: 5px;
@@ -1019,7 +961,7 @@ nav ul li a.active {
 }
 
 footer {
-    background-color: #1DB954;
+    background-color:  #4A8557;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -1027,4 +969,14 @@ footer {
     width: 100%;
     bottom: 0;
 }
-/*ssssssssssssssssssss
+
+
+body {
+    font-family: 'Sora', sans-serif;
+}
+
+footer {
+    font-family: 'Lato', sans-serif;
+}
+
+

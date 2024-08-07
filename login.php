@@ -2,33 +2,32 @@
 include 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-    $sql = "SELECT id, nome, senha FROM users WHERE email = ?";
+    $sql = "SELECT id, username, password FROM users WHERE username = ?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $email);
+    $stmt->bind_param("s", $username);
     $stmt->execute();
     $stmt->store_result();
-    $stmt->bind_result($id, $nome, $stored_senha);
+    $stmt->bind_result($id, $stored_username, $stored_password);
 
     if ($stmt->num_rows > 0) {
         $stmt->fetch();
-        if (password_verify($senha, $stored_senha)) {
-            echo "Login successful! Welcome, " . $nome;
-            // Start session or redirect to the main page
+        if (password_verify($password, $stored_password)) {
+            echo "Login successful! Welcome, " . $stored_username;
+            // Iniciar sessão ou redirecionar para a página principal
         } else {
             echo "Invalid password.";
         }
     } else {
-        echo "No user found with that email.";
+        echo "No user found with that username.";
     }
 
     $stmt->close();
     $conn->close();
 }
 ?>
-
 
 <!DOCTYPE html>
 <html>

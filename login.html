@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login e Cadastro</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página Inicial</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Sora:wght@400;700&display=swap" rel="stylesheet">
+    </head>
 <body>
     <header>
-        <div class="logo">Seu Logo</div>
+        <div  class="logo">
+            <img src="LOGO.jpg">
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
@@ -26,24 +29,21 @@
             </div>
             <form id="login-form" class="input-group">
                 <h2>Login</h2>
-                <input type="email" class="input-field" placeholder="Email" name="email" required>
-                <input type="password" class="input-field" placeholder="Senha" name="senha" required>
+                <input type="text" class="input-field" placeholder="Email" required>
+                <input type="password" class="input-field" placeholder="Senha" required>
                 <button type="submit" class="submit-btn">Entrar</button>
-                <div id="login-result"></div>
             </form>
             <form id="register-form" class="input-group">
                 <h2>Cadastro</h2>
-                <input type="text" class="input-field" placeholder="Nome Completo" name="nome" required>
-                <input type="text" class="input-field" placeholder="CPF" name="cpf" required>
-                <!-- <input type="email" class="input-field" placeholder="Email" name="email" required> -->
-                <input type="password" class="input-field" placeholder="Senha" name="senha" required>
+                <input type="text" class="input-field" placeholder="Nome Completo" required>
+                <input type="email" class="input-field" placeholder="Email" required>
+                <input type="password" class="input-field" placeholder="Senha" required>
                 <button type="submit" class="submit-btn">Cadastrar</button>
-                <div id="register-result"></div>
             </form>
         </div>
     </main>
     <footer>
-        <p>&copy; 2024 SustentaBuild. Todos os direitos reservados.</p>
+        <p>&copy; 2024 Seu Site. Todos os direitos reservados.</p>
     </footer>
     <script src="script.js"></script>
 </body>

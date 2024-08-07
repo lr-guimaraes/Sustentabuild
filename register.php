@@ -1,52 +1,26 @@
-<!-- <?php
- 
-$NameUser = $_POST["nome"];
-// $BirthDate = $_POST["BirthDate"];
-// $User = $_POST["User"];
-$Email = $_POST["email"];
-$PasswordUser = $_POST["senha"];
+<?php
+include 'config.php';
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-$con = mysqli_connect("localhost:3306", "root", "root", "bank_tde");
+    $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ss", $username, $password);
 
-mysqli_query($con, "INSERT INTO registration (nome, email, senha) VALUES('$nome', '$email','$senha') ");    
-// include 'config.php';
+    if ($stmt->execute()) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     $nome = $_POST['nome'];
-//     $cpf = $_POST['cpf'];
-//     $email = $_POST['email'];
-//     $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+    $stmt->close();
+    $conn->close();
+}
+?>
 
-//     $sql = "INSERT INTO users (nome, cpf, email, senha) VALUES (?, ?, ?, ?)";
-//     $stmt = $conn->prepare($sql);
-//     $stmt->bind_param("ssss", $nome, $cpf, $email, $senha);
-
-//     if ($stmt->execute()) {
-//         echo "Registration successful!";
-//     } else {
-//         echo "Error: " . $stmt->error;
-//     }
-
-//     $stmt->close();
-//     $conn->close();
-// }
-?> -->
-
-
-$NameUser = $_POST["nome"];
-// $BirthDate = $_POST["BirthDate"];
-// $User = $_POST["User"];
-$Email = $_POST["email"];
-$PasswordUser = $_POST["senha"];
-
-
-$con = mysqli_connect("localhost:3306", "root", "root", "bank_tde");
-
-mysqli_query($con, "INSERT INTO registration (nome, email, senha) VALUES('$nome', '$email','$senha') ");    
-
-
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Register</title>
@@ -62,4 +36,4 @@ mysqli_query($con, "INSERT INTO registration (nome, email, senha) VALUES('$nome'
         <input type="submit" value="Register">
     </form>
 </body>
-</html> -->
+</html>
