@@ -1175,9 +1175,9 @@ nav ul li a {
 }
 
 /* Media Queries para Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .logo img {
-        max-width: 120px; /* Reduz o tamanho do logo em telas menores */
+        max-width: 70px; /* Reduz o tamanho do logo em telas menores */
     }
     
     nav ul li {
