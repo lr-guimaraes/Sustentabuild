@@ -1305,7 +1305,7 @@ nav ul li a {
     margin-left: 10px;
     padding: 5px 10px;
     background-color: #e74c3c;
-    color: #fff;
+  //  color: #fff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -1339,3 +1339,4 @@ nav ul li a {
         margin-bottom: 0; /* Remove a margem inferior do botão para não adicionar espaço desnecessário */
     }
 }
+
