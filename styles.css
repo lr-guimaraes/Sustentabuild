@@ -1881,7 +1881,7 @@ nav ul li a {
 }
 
 
- footer {
+header, footer {
     background-color: #121212;
     color: #FFFFFF;
     padding: 10px 0;
