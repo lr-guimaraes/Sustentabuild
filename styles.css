@@ -1386,17 +1386,6 @@ nav ul li a {
     display: none; /* Oculta o botão quando já está expandido */
 }
 
-@media (max-width: 768px) {
-    .material-item {
-        max-height: 80px; /* Altura ajustada para telas menores */
-    }
-
-    .material-item .material-text {
-        -webkit-line-clamp: 3; /* Mais linhas visíveis em telas menores */
-    }
-}
-
-
 /* Estilo para o item de material */
 .material-item {
     display: flex;
@@ -1411,6 +1400,7 @@ nav ul li a {
 
 .material-item label {
     margin-right: 10px;
+    color: #fff; /* Letras brancas */
     white-space: nowrap; /* Impede a quebra de linha dentro do label */
 }
 
@@ -1422,11 +1412,42 @@ nav ul li a {
     margin-left: 10px;
     padding: 5px 10px;
     background-color: #e74c3c; /* Botão com fundo vermelho */
-    color: #fff;
+    color: #fff; /* Letras brancas do botão */
     border: none;
     border-radius: 3px;
     cursor: pointer;
 }
+
+.material-item button:hover {
+    background-color: #c0392b; /* Hover do botão */
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .material-item {
+        flex-direction: column; /* Alinha os itens na vertical */
+        text-align: center; /* Centraliza o texto */
+        margin-bottom: 15px; /* Espaço maior entre linhas */
+        padding: 15px; /* Espaçamento interno aumentado */
+    }
+    
+    .material-item label, 
+    .material-item input[type="checkbox"], 
+    .material-item button {
+        width: 100%; /* Faz com que os elementos ocupem toda a largura disponível */
+        margin: 0; /* Remove margens laterais */
+        margin-bottom: 10px; /* Adiciona espaço entre os elementos */
+    }
+    
+    .material-item input[type="checkbox"] {
+        padding: 10px; /* Aumenta o preenchimento para facilitar o toque */
+    }
+    
+    .material-item button {
+        padding: 10px; /* Aumenta o preenchimento para facilitar o toque */
+    }
+}
+
 
 .material-item button:hover {
     background-color: #c0392b; /* Hover do botão */
