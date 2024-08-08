@@ -28,43 +28,42 @@ document.getElementById('material-filter').addEventListener('change', function()
         });
     }
 });
+document.getElementById('material-filter').addEventListener('change', function() {
+    const materialList = document.getElementById('material-list');
+    materialList.innerHTML = ''; // Clear previous materials
 
-document.getElementById('search-material').addEventListener('input', function() {
-    const filter = this.value.toLowerCase();
-    const materials = document.querySelectorAll('#material-list .material-item');
-    const selectAll = document.createElement('div');
-    selectAll.classList.add('material-item');
-    
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.id = 'select-all';
-    checkbox.classList.add('material-checkbox');
-    checkbox.addEventListener('change', function() {
-        materials.forEach(item => {
-            item.querySelector('input').checked = checkbox.checked;
+    if (this.value === 'argamassa') {
+        const materials = [
+            { value: 'argamassa1', text: 'Argamassa, para revestimento de paredes de alvenaria em ambientes internos e externos, 40-65% areia cálcica, 10-30% areia sílica, 5-25% cimento Portland, 2203 Matrix Massa de Projeção (Votorantim Cimentos, fábrica de Cajamar)' },
+            { value: 'argamassa2', text: 'Argamassa, para revestimento de paredes de alvenaria em ambientes internos e externos, 40-65% areia cálcica, 10-30% areia sílica, 5-25% cimento Portland, 2203 Matrix Massa de Projeção (Votorantim Cimentos, fábrica de Camaçari)' }
+        ];
+
+        materials.forEach(material => {
+            const div = document.createElement('div');
+            div.classList.add('material-item');
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.value = material.value;
+            checkbox.classList.add('material-checkbox');
+            div.appendChild(checkbox);
+
+            const textDiv = document.createElement('div');
+            textDiv.classList.add('material-text');
+            textDiv.textContent = material.text;
+            div.appendChild(textDiv);
+
+            const button = document.createElement('button');
+            button.textContent = 'Expandir';
+            button.classList.add('expand-btn');
+            button.addEventListener('click', () => {
+                div.classList.toggle('expanded');
+                button.textContent = div.classList.contains('expanded') ? 'Colapsar' : 'Expandir';
+            });
+            div.appendChild(button);
+
+            materialList.appendChild(div);
         });
-    });
-    selectAll.appendChild(checkbox);
-    
-    const label = document.createElement('label');
-    label.textContent = 'Selecionar Todos';
-    selectAll.appendChild(label);
-    
-    document.getElementById('material-list').prepend(selectAll);
-    
-    materials.forEach(item => {
-        const label = item.querySelector('label');
-        if (label.textContent.toLowerCase().includes(filter)) {
-            item.style.display = '';
-        } else {
-            item.style.display = 'none';
-        }
-    });
-
-    if (filter === '') {
-        selectAll.style.display = '';
-    } else {
-        selectAll.style.display = 'none';
     }
 });
 
