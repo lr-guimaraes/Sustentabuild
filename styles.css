@@ -1881,9 +1881,9 @@ nav ul li a {
 }
 
 
-header, footer {
-    background-color: #333;
-    color: #fff;
+ footer {
+    background-color: #121212;
+    color: #FFFFFF;
     padding: 10px 0;
     text-align: center;
 }
