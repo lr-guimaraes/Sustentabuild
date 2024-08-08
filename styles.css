@@ -1346,4 +1346,41 @@ nav ul li a {
         padding: 3px; /* Reduz o padding dos campos de entrada e botões */
     }
 }
+/* Regras gerais para a página */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Colunas padrão */
+    gap: 10px;
+}
+
+/* Estilo para telas pequenas */
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: 1fr; /* Muda para uma coluna */
+        gap: 5px; /* Reduz o espaço entre os itens */
+    }
+    
+    .argamassa-row {
+        flex-direction: column; /* Alinha os itens na vertical */
+        text-align: center; /* Centraliza o texto */
+        margin-bottom: 15px; /* Espaço maior entre linhas */
+        padding: 15px; /* Espaçamento interno aumentado */
+    }
+    
+    .argamassa-row label, 
+    .argamassa-row input, 
+    .argamassa-row button {
+        width: 100%; /* Faz com que os elementos ocupem toda a largura disponível */
+        margin: 0; /* Remove margens laterais */
+        margin-bottom: 10px; /* Adiciona espaço entre os elementos */
+    }
+    
+    .argamassa-row input {
+        padding: 10px; /* Aumenta o preenchimento para facilitar o toque */
+    }
+    
+    .argamassa-row button {
+        padding: 10px; /* Aumenta o preenchimento para facilitar o toque */
+    }
+}
 
