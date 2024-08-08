@@ -75,70 +75,58 @@ document.getElementById('material-list').addEventListener('change', function(eve
 
 function updateArgamassaFields() {
     const selectedMaterials = document.querySelectorAll('#material-list input:checked');
-    const argamassaFields = document.getElementById('argamassa-fields');
-    argamassaFields.innerHTML = ''; // Clear previous fields
+    const materialTableBody = document.getElementById('material-table-body');
+    materialTableBody.innerHTML = ''; // Clear previous rows
 
     selectedMaterials.forEach(material => {
         const materialName = material.nextElementSibling.textContent;
-        const row = document.createElement('div');
-        row.classList.add('argamassa-row');
-        
-        const nameLabel = document.createElement('label');
-        nameLabel.textContent = 'Material: ' + materialName;
-        row.appendChild(nameLabel);
+        const row = document.createElement('tr');
 
-        const volumeLabel = document.createElement('label');
-        volumeLabel.textContent = 'Volume (m³):';
-        row.appendChild(volumeLabel);
+        const nameCell = document.createElement('td');
+        nameCell.textContent = 'Material: ' + materialName;
+        row.appendChild(nameCell);
 
+        const volumeCell = document.createElement('td');
         const volumeInput = document.createElement('input');
         volumeInput.type = 'number';
-        volumeInput.name = 'volume';
         volumeInput.placeholder = 'Volume em m³';
-        row.appendChild(volumeInput);
+        volumeCell.appendChild(volumeInput);
+        row.appendChild(volumeCell);
 
-        const distanceLabel = document.createElement('label');
-        distanceLabel.textContent = 'Distância (km):';
-        row.appendChild(distanceLabel);
-
+        const distanceCell = document.createElement('td');
         const distanceInput = document.createElement('input');
         distanceInput.type = 'number';
-        distanceInput.name = 'distance';
         distanceInput.placeholder = 'Distância em km';
-        row.appendChild(distanceInput);
+        distanceCell.appendChild(distanceInput);
+        row.appendChild(distanceCell);
 
-        const gwsLabel = document.createElement('label');
-        gwsLabel.textContent = 'CO2e:';
-        row.appendChild(gwsLabel);
-
+        const gwsCell = document.createElement('td');
         const gwsInput = document.createElement('input');
         gwsInput.type = 'text';
-        gwsInput.name = 'gws';
         gwsInput.placeholder = 'CO2e';
         gwsInput.disabled = true; // This field is automatically filled
-        row.appendChild(gwsInput);
+        gwsCell.appendChild(gwsInput);
+        row.appendChild(gwsCell);
 
-        const resultLabel = document.createElement('label');
-        resultLabel.textContent = 'Resultado:';
-        row.appendChild(resultLabel);
-
+        const resultCell = document.createElement('td');
         const resultInput = document.createElement('input');
         resultInput.type = 'text';
-        resultInput.name = 'result';
         resultInput.placeholder = 'Resultado';
         resultInput.disabled = true; // This field is automatically filled
-        row.appendChild(resultInput);
+        resultCell.appendChild(resultInput);
+        row.appendChild(resultCell);
 
+        const removeCell = document.createElement('td');
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remover';
-        removeButton.type = 'button';
         removeButton.addEventListener('click', function() {
-            argamassaFields.removeChild(row);
+            materialTableBody.removeChild(row);
             material.checked = false; // Uncheck the material
         });
-        row.appendChild(removeButton);
+        removeCell.appendChild(removeButton);
+        row.appendChild(removeCell);
 
-        argamassaFields.appendChild(row);
+        materialTableBody.appendChild(row);
 
         // Automatically fill GWS and Resultado based on some logic
         volumeInput.addEventListener('input', function() {
@@ -151,6 +139,7 @@ function updateArgamassaFields() {
         });
     });
 }
+
 
 function getGWS(materialType) {
     const GWS = {
