@@ -1317,7 +1317,11 @@ nav ul li a {
 }
 
 /* Media Queries para telas menores */
-@media (max-width: 600px) {
+@media (max-width: 486px) {
+        nav ul li a{
+        margin-left: 0.6%; /* Reduz o espaço entre os itens do menu */
+        font-size: 0.1em;
+    }
     .argamassa-row {
         flex-direction: column; /* Alinha os itens verticalmente em telas menores */
         align-items: flex-start; /* Alinha os itens ao início do container */
