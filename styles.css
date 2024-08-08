@@ -1360,7 +1360,7 @@ nav ul li a {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: #333; /* Cor do texto */
+    color: #fff; /* Cor do texto */
 }
 
 .material-item .expand-btn {
