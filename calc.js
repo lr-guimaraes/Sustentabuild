@@ -5,8 +5,8 @@ document.getElementById('material-filter').addEventListener('change', function()
 
     if (this.value === 'argamassa') {
         const materials = [
-            { value: 'argamassa1', text: 'Argamassa 1' },
-            { value: 'argamassa2', text: 'Argamassa 2' }
+            { value: 'argamassa1', text: 'Argamassa, para revestimento de paredes de alvenaria em ambientes internos e externos, 40-65% areia cálcica, 10-30% areia sílica, 5-25% cimento Portland, 2203 Matrix Massa de Projeção (Votorantim Cimentos, fábrica de Cajamar)' },
+            { value: 'argamassa2', text: 'Argamassa, para revestimento de paredes de alvenaria em ambientes internos e externos, 40-65% areia cálcica, 10-30% areia sílica, 5-25% cimento Portland, 2203 Matrix Massa de Projeção (Votorantim Cimentos, fábrica de Camaçari)' }
         ];
 
         materials.forEach(material => {
