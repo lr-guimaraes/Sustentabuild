@@ -89,7 +89,7 @@ function updateArgamassaFields() {
         const volumeCell = document.createElement('td');
         const volumeInput = document.createElement('input');
         volumeInput.type = 'number';
-        volumeInput.placeholder = 'Volume em m³';
+        volumeInput.placeholder = 'MAssa em kg';
         volumeCell.appendChild(volumeInput);
         row.appendChild(volumeCell);
 
