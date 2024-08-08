@@ -1881,3 +1881,57 @@ nav ul li a {
 }
 
 
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer {
+    position: relative; /* Permite que o footer não sobreponha o conteúdo */
+    margin-top: 20px; /* Espaço adicional acima do footer */
+}
+
+main {
+    padding: 20px;
+    margin-bottom: 80px; /* Adiciona espaço inferior para o footer */
+}
+
+.material-table-section {
+    margin: 20px 0;
+}
+
+/* Estilos para a tabela responsiva */
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.responsive-table th, .responsive-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.responsive-table th {
+    background-color: #333;
+    color: #fff;
+}
+
+.responsive-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.responsive-table tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .responsive-table th, .responsive-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
