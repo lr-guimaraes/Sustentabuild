@@ -1336,24 +1336,6 @@ nav ul li a {
 }
 
 /* Estilo para dispositivos ainda menores */
-@media (max-width: 480px) {
-    .argamassa-row {
-        padding: 5px; /* Reduz o padding */
-    }
-
-    .argamassa-row input,
-    .argamassa-row button {
-        padding: 3px; /* Reduz o padding dos campos de entrada e botões */
-    }
-}
-/* Regras gerais para a página */
-.menu-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Colunas padrão */
-    gap: 10px;
-}
-
-/* Estilo para telas pequenas */
 .material-item {
     display: flex;
     align-items: center;
@@ -1365,7 +1347,7 @@ nav ul li a {
     position: relative;
     overflow: hidden;
     max-height: 60px; /* Altura padrão quando o material está truncado */
-    transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease, border-color 0.3s ease;
 }
 
 .material-item.expanded {
@@ -1378,27 +1360,30 @@ nav ul li a {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #333; /* Cor do texto */
 }
 
 .material-item .expand-btn {
-    display: none;
+    display: block;
     position: absolute;
     bottom: 10px;
     right: 10px;
-    background-color: #3498db;
-    color: #fff;
+    background-color: #3498db; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
     border: none;
     border-radius: 3px;
     padding: 5px 10px;
     cursor: pointer;
+    font-size: 14px; /* Tamanho da fonte do botão */
+    transition: background-color 0.3s ease;
+}
+
+.material-item .expand-btn:hover {
+    background-color: #2980b9; /* Cor de fundo do botão ao passar o mouse */
 }
 
 .material-item.expanded .expand-btn {
     display: none; /* Oculta o botão quando já está expandido */
-}
-
-.material-item .expand-btn.show {
-    display: block;
 }
 
 @media (max-width: 768px) {
