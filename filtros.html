@@ -46,22 +46,110 @@
             <div class="menu-item">
                 <h3>Estruturas Verticais</h3>
                 <div class="description-and-buttons">
-                    <label for="external-walls-1">Paredes Externas</label>
+                    <label for="external-walls-1" style="text-align: left;">Paredes Externas</label>
                     <div class="button-group">
                         <button class="action-button"><span class="material-symbols-outlined">add</span> Criar Grupo</button>
                         <button class="action-button"><span class="material-symbols-outlined">move_group</span> Mover Materiais</button>
                         <button class="action-button"><span class="material-symbols-outlined">compare</span> Adicionar Comparação</button>
                     </div> 
                 </div>
-                <label for="search-material-1">Buscar Material</label>
-                <input type="text" id="search-material-1" class="input-box" placeholder="Buscar material">
+                    <select id="columns-1" class="input-box">
+                       <input type="text" id="search-material" class="input-box" placeholder="Buscar material">
+                    </select>
+                    <label for="columns-2">Colunas</label>
+                    <select id="columns-2" class="input-box">
+                       <input type="text" id="search-material" class="input-box" placeholder="Buscar material">
+                    </select>
+                
+            </div>
+            <div class="menu-item">
+                <h3>Estruturas Horizontais</h3>
+                <div class="description-and-buttons">
+                    <label for="external-walls-3" style="text-align: left;">Telhados, lajes e coberturas</label>
+                    <div class="button-group">
+                        <button class="action-button"><span class="material-symbols-outlined">add</span> Criar Grupo</button>
+                        <button class="action-button"><span class="material-symbols-outlined">move_group</span> Mover Materiais</button>
+                        <button class="action-button"><span class="material-symbols-outlined">compare</span> Adicionar Comparação</button>
+                    </div>
+                </div>
+                <select id="columns-3" class="input-box">
+                   <input type="text" id="search-material" class="input-box" placeholder="Buscar material">
+                </select>
+                <label for="columns-4">Colunas</label>
+                <select id="columns-4" class="input-box">
+                    <input type="text" id="search-material" class="input-box" placeholder="Buscar material">
+                </select>
+            </div>
+            <div class="menu-item">
+                <h3>Outras Estruturas</h3>
+                <div class="description-and-buttons">
+                    <label for="external-walls-4" style="text-align: left;">Descrição do conteúdo</label>
+                    <div class="button-group">
+                        <button class="action-button"><span class="material-symbols-outlined">add</span> Criar Grupo</button>
+                        <button class="action-button"><span class="material-symbols-outlined">move_group</span> Mover Materiais</button>
+                        <button class="action-button"><span class="material-symbols-outlined">compare</span> Adicionar Comparação</button>
+                    </div>
+                </div>
+                <div class="description-and-buttons">
+                    <div>
+                        <label for="columns-5" style="text-align: left;">Buscar Material</label>
+                    </div>
+                  
+                    <input type="text" id="search-material" class="input-box" placeholder="Buscar material">
+                </div>
+                <div id="material-list"></div>
+                <div id="argamassa-fields"></div>
+                <select id="columns-5" class="input-box">
+                    <input type="text" id="search-material" class="input-box" placeholder="Buscar material">
+                </select>
 
             </div>
-            <!-- Adicione outros .menu-item aqui com a mesma estrutura -->
+            <div class="menu-item">
+                <h3>Áreas Externas</h3>
+                <div class="description-and-buttons">
+                    <label for="external-walls-7" style="text-align: left;">Descrição do conteúdo</label>
+                    <div class="button-group">
+                        <button class="action-button"><span class="material-symbols-outlined">add</span> Criar Grupo</button>
+                        <button class="action-button"><span class="material-symbols-outlined">move_group</span> Mover Materiais</button>
+                        <button class="action-button"><span class="material-symbols-outlined">compare</span> Adicionar Comparação</button>
+                    </div>
+                </div>
+                <select id="columns-7" class="input-box">
+                    <input type="text" id="search-material" class="input-box" placeholder="Buscar material">
+                </select>
+            </div>
+            <div class="menu-item">
+                <h3>Fundação e Subestruturas</h3>
+                <div class="description-and-buttons">
+                    <label for="external-walls-8" style="text-align: left;">Descrição do conteúdo</label>
+                    <div class="button-group">
+                        <button class="action-button"><span class="material-symbols-outlined">add</span> Criar Grupo</button>
+                        <button class="action-button"><span class="material-symbols-outlined">move_group</span> Mover Materiais</button>
+                        <button class="action-button"><span class="material-symbols-outlined">compare</span> Adicionar Comparação</button>
+                    </div>
+                </div>
+                <select id="columns-8" class="input-box">
+                   <input type="text" id="search-material" class="input-box" placeholder="Buscar material">
+                </select>
+            </div>
+            <div class="menu-item">
+                <h3>Tecnologia de Construção</h3>
+                <div class="description-and-buttons">
+                    <label for="external-walls-9" style="text-align: left;">Tipo, Quantidade de CO2</label>
+                    <div class="button-group">
+                        <button class="action-button"><span class="material-symbols-outlined">add</span> Criar Grupo</button>
+                        <button class="action-button"><span class="material-symbols-outlined">move_group</span> Mover Materiais</button>
+                        <button class="action-button"><span class="material-symbols-outlined">compare</span> Adicionar Comparação</button>
+                    </div>
+                </div>
+                <select id="columns-9" class="input-box">
+                   <input type="text" id="search-material" class="input-box" placeholder="Buscar material">
+                </select>
+            </div>
         </section>
         <!-- Tabela de Material -->
-        <div id="material-list"></div>
-        <div id="argamassa-fields"></div>
+
+
     </main>
     <footer>
         <p>&copy; 2024, Sustentabuild.</p>
