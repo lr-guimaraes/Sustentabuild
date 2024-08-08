@@ -1281,62 +1281,36 @@ nav ul li a {
     align-items: center;
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #4A8557; /* Ajustado para corresponder à paleta de cores */
     border-radius: 5px;
-    background-color: #fff;
-    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se não houver espaço suficiente */
+    background-color: #282828; /* Cor de fundo escura para combinar com o tema */
 }
 
 .argamassa-row label {
     margin-right: 10px;
     white-space: nowrap; /* Impede a quebra de linha dentro do label */
-    flex: 1; /* Permite que o label ocupe o máximo de espaço disponível */
+    color: #FFFFFF; /* Cor do texto para contrastar com o fundo escuro */
 }
 
 .argamassa-row input {
     margin-right: 10px;
     padding: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #4A8557; /* Cor da borda ajustada para combinar com a paleta */
     border-radius: 3px;
-    flex: 2; /* Permite que o input ocupe mais espaço que o label */
+    background-color: #404040; /* Cor de fundo para se adequar ao tema escuro */
+    color: #FFFFFF; /* Cor do texto dentro dos campos de entrada */
 }
 
 .argamassa-row button {
     margin-left: 10px;
     padding: 5px 10px;
-    background-color: #e74c3c;
-  //  color: #fff;
+    background-color: #4A8557; /* Cor do botão ajustada para combinar com a paleta */
+    color: #FFFFFF; /* Cor do texto do botão */
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    flex: 1; /* Ajusta o botão para ocupar espaço conforme necessário */
 }
 
 .argamassa-row button:hover {
-    background-color: #c0392b;
+    background-color: #3a6a4b; /* Cor de fundo do botão ao passar o mouse */
 }
-
-/* Media Queries para telas menores */
-@media (max-width: 486px) {
-        nav ul li a{
-        margin-left: 0.6%; /* Reduz o espaço entre os itens do menu */
-        font-size: 0.1em;
-    }
-    .argamassa-row {
-        flex-direction: column; /* Alinha os itens verticalmente em telas menores */
-        align-items: flex-start; /* Alinha os itens ao início do container */
-    }
-
-    .argamassa-row label, 
-    .argamassa-row input, 
-    .argamassa-row button {
-        margin-right: 0;
-        margin-bottom: 10px; /* Adiciona espaço entre os elementos em telas pequenas */
-        width: 100%; /* Faz com que os elementos ocupem toda a largura disponível */
-    }
-
-    .argamassa-row button {
-        margin-bottom: 0; /* Remove a margem inferior do botão para não adicionar espaço desnecessário */
-    }
-}
-
