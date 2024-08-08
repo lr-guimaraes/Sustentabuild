@@ -1,39 +1,40 @@
 <?php
-include 'config.php';
+// Conecte-se ao banco de dados
+$servername = "192.168.1.100"; // IP do servidor de banco de dados
+$username = "meuusuario";
+$password = "minhasenha";
+$dbname = "meubanco";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    if ($stmt->execute()) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-    $stmt->close();
-    $conn->close();
+// Verifique a conexão
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
-?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Register</title>
-</head>
-<body>
-    <form method="post" action="register.php">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <input type="submit" value="Register">
-    </form>
-</body>
-</html>
+// Receba os dados do formulário
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$senha = $_POST['senha'];
+
+// Verifique se o email já está registrado
+$sql = "SELECT * FROM usuarios WHERE email='$email'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "Email já cadastrado.";
+} else {
+    // Insira os dados no banco de dados
+    $senhaHash = password_hash($senha, PASSWORD_DEFAULT); // Criptografa a senha
+    $sql = "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$senhaHash')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Cadastro realizado com sucesso!";
+    } else {
+        echo "Erro ao cadastrar: " . $conn->error;
+    }
+}
+
+$conn->close();
+?>

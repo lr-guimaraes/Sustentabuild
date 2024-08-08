@@ -1,48 +1,38 @@
 <?php
-include 'config.php';
+// Conecte-se ao banco de dados
+$servername = "192.168.1.100"; // IP do servidor de banco de dados
+$username = "meuusuario";
+$password = "minhasenha";
+$dbname = "meubanco";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
 
-    $sql = "SELECT id, username, password FROM users WHERE username = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $stmt->store_result();
-    $stmt->bind_result($id, $stored_username, $stored_password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    if ($stmt->num_rows > 0) {
-        $stmt->fetch();
-        if (password_verify($password, $stored_password)) {
-            echo "Login successful! Welcome, " . $stored_username;
-            // Iniciar sessão ou redirecionar para a página principal
-        } else {
-            echo "Invalid password.";
-        }
-    } else {
-        echo "No user found with that username.";
-    }
-
-    $stmt->close();
-    $conn->close();
+// Verifique a conexão
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
-?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-</head>
-<body>
-    <form method="post" action="login.php">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <input type="submit" value="Login">
-    </form>
-</body>
-</html>
+// Receba os dados do formulário
+$email = $_POST['email'];
+$senha = $_POST['senha'];
+
+// Verifique as credenciais
+$sql = "SELECT * FROM usuarios WHERE email='$email'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $user = $result->fetch_assoc();
+    if (password_verify($senha, $user['senha'])) {
+        session_start();
+        $_SESSION['user_id'] = $user['id'];
+        echo "Login realizado com sucesso!";
+    } else {
+        echo "Senha incorreta.";
+    }
+} else {
+    echo "Email não registrado.";
+}
+
+$conn->close();
+?>

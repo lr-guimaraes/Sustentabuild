@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const registerForm = document.getElementById('register-form');
     const loginForm = document.getElementById('login-form');
+    const registerResult = document.getElementById('register-result');
+    const loginResult = document.getElementById('login-result');
 
     registerForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -12,10 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(response => response.text())
         .then(data => {
-            document.getElementById('register-result').textContent = data;
+            registerResult.textContent = data;
+            registerResult.style.color = data.includes("sucesso") ? "green" : "red";
             registerForm.reset();
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => {
+            registerResult.textContent = "Ocorreu um erro: " + error;
+            registerResult.style.color = "red";
+        });
     });
 
     loginForm.addEventListener('submit', function(e) {
@@ -28,13 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(response => response.text())
         .then(data => {
-            document.getElementById('login-result').textContent = data;
+            loginResult.textContent = data;
+            loginResult.style.color = data.includes("sucesso") ? "green" : "red";
             loginForm.reset();
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => {
+            loginResult.textContent = "Ocorreu um erro: " + error;
+            loginResult.style.color = "red";
+        });
     });
 });
-// script.js
+
 function toggleForm(formType) {
     var loginForm = document.getElementById('login-form');
     var registerForm = document.getElementById('register-form');
