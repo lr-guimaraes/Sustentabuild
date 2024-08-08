@@ -1284,11 +1284,13 @@ nav ul li a {
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #fff;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se não houver espaço suficiente */
 }
 
 .argamassa-row label {
     margin-right: 10px;
     white-space: nowrap; /* Impede a quebra de linha dentro do label */
+    flex: 1; /* Permite que o label ocupe o máximo de espaço disponível */
 }
 
 .argamassa-row input {
@@ -1296,6 +1298,7 @@ nav ul li a {
     padding: 5px;
     border: 1px solid #ddd;
     border-radius: 3px;
+    flex: 2; /* Permite que o input ocupe mais espaço que o label */
 }
 
 .argamassa-row button {
@@ -1306,8 +1309,29 @@ nav ul li a {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    flex: 1; /* Ajusta o botão para ocupar espaço conforme necessário */
 }
 
 .argamassa-row button:hover {
     background-color: #c0392b;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 600px) {
+    .argamassa-row {
+        flex-direction: column; /* Alinha os itens verticalmente em telas menores */
+        align-items: flex-start; /* Alinha os itens ao início do container */
+    }
+
+    .argamassa-row label, 
+    .argamassa-row input, 
+    .argamassa-row button {
+        margin-right: 0;
+        margin-bottom: 10px; /* Adiciona espaço entre os elementos em telas pequenas */
+        width: 100%; /* Faz com que os elementos ocupem toda a largura disponível */
+    }
+
+    .argamassa-row button {
+        margin-bottom: 0; /* Remove a margem inferior do botão para não adicionar espaço desnecessário */
+    }
 }
